@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de Moodboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Moodboard</h1>
+        <p>Choisis un mot-clé pour générer un moodboard :</p>
+        <div class="mood-selector">
+            <button class="mood-btn" data-mood="calme">Calme</button>
+            <button class="mood-btn" data-mood="dynamique">Dynamique</button>
+            <button class="mood-btn" data-mood="minimaliste">Minimaliste</button>
+        </div>
+        <div class="moodboard-results">
+            </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

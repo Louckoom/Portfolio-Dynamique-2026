@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Portfolio Dynamique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Bienvenue, Lucas !</h1>
+    <h2>Mes Projets</h2>
+    {% for project in projects %}
+<div class="project-card is-hidden">
+    <img class="project-image" src="{{ url_for('static', filename=project.image_url) }}" alt="Image de {{ project.title }}">
+    <h3 class="project-title">{{ project.title }}</h3>
+    <p class="project-description">{{ project.description }}</p>
+    <a href="{{ project.link }}" class="project-link">Voir le projet</a>
+</div>
+<hr>
+{% endfor %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+
+</html>

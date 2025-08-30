@@ -1,0 +1,55 @@
+.mood-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.moodboard-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.moodboard-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.moodboard-item {
+    width: 100%;
+    padding-bottom: 100%; // Cette astuce crée un carré parfait basé sur la largeur
+    position: relative; // Nécessaire pour positionner l'image à l'intérieur
+    overflow: hidden; // Cache les parties de l'image qui dépassent
+    border-radius: 8px; // Ajoute un peu d'esthétisme
+}
+
+.moodboard-results img {
+    max-width: 100%;
+    height: auto;
+    display: block; // Pour retirer l'espace vide sous l'image
+}
+
+.moodboard-item.color-item {
+    width: 100%;
+    padding-bottom: 100%; // Crée un carré parfait
+    border-radius: 8px;
+}
+
+.moodboard-item.image-item {
+    // Crée une zone de 200px de haut pour la photo.
+    height: 200px; 
+    // Cache tout ce qui dépasse.
+    overflow: hidden; 
+    // Assure que l'image à l'intérieur est bien positionnée.
+    position: relative; 
+}
+
+
+.moodboard-item.image-item img {
+    position: absolute; // Positionne l'image par rapport au conteneur
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // L'élément clé : l'image remplit le conteneur sans se déformer
+}
